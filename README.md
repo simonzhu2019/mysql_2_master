@@ -1,6 +1,6 @@
 # mysql_2_master
 mysql cluster for 2 master,test by docker mysql:5.7 image.
-- 测试步骤
+- 准备并启动双主（主从复制关系尚未建立）
 ```
 # git clone https://github.com/simonzhu2019/mysql_2_master.git
 root@u0:~/mysql_2_master# cd mysql_2_master
