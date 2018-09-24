@@ -29,5 +29,18 @@ services:
     networks:
       - mysql
 
+  ha:
+    image: haproxy:1.8.14
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - $PWD/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    hostname: ha
+    networks:
+      - mysql
+    ports:
+      - 3306:3306
+      - 80:80
+
 networks:
   mysql:
